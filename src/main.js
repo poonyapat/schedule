@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import firebase from 'firebase'
+import Vuetify from 'vuetify'
 
 Vue.config.productionTip = false
 
@@ -18,7 +19,15 @@ var config = {
 };
 firebase.initializeApp(config);
 
-console.log(firebase.database())
+Vue.use(Vuetify, {
+  theme: {
+    primary: 'black',
+    secondary: '#A1E7fe',
+    accent: '#8c9eff',
+    error: '#b71c1c'
+  }
+})
+
 new Vue({
   router,
   store,
