@@ -10,17 +10,19 @@
                 </router-link>
             </v-flex>
             <v-flex xs12>
-                <v-div on-hover>
-                    <h2>Output</h2>
-                    <p>Check you and your friend schedule</p>
-                </v-div>
+                <router-link :to="{name: 'OutputView'}">
+                    <v-div on-hover>
+                        <h2>Output</h2>
+                        <p>Check you and your friend schedule</p>
+                    </v-div>
+                </router-link>
             </v-flex>
         </v-layout>
     </v-container>
 </template>
 
 <script>
-import VDiv from '@/components/VDiv'
+    import VDiv from '@/components/VDiv'
     export default {
         components: {
             VDiv
